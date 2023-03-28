@@ -1,16 +1,11 @@
 .Annonces-list{
-
-   
     background-color: rgb(250, 248, 248);
     margin: 80px 20px 40px 20px;
     border-radius: 20px;
     padding-top: 80px;
-    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-   
-    
+    justify-content: space-evenly;  
 }
 
 .Annonce-link {
@@ -19,11 +14,11 @@
 }
 
 .Annonce-img{
-        width: 500px;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 10px 10px 10px 10px;
-        filter: brightness(75%);    
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px 10px 10px 10px;
+    filter: brightness(75%);    
         
 }
 
@@ -31,8 +26,34 @@
    transform: translateY(-90px);
    padding-left: 20px;
    color: white;
-  
-}
+  }
 
 
+  /*Media queries*/
+
+@media screen and (max-width: 730px){
+   
+    
+    .Annonces-list{
+    background-color: white;
+    flex-direction: column;
+    align-content: center;
+    margin: 80px 20px 40px 20px;
+    padding-top: 10px;
+    }
+    
+  }
+  @media screen and (max-width: 560px){
+    .Home{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+    }
+    .Annonce-img{
+        width: 380px;
+        height: 280px;
+        
+            
+    }
+  }
 

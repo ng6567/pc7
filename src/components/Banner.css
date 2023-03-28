@@ -3,31 +3,47 @@
 .Banner {
     border-radius: 25px;
     height: 225px;
-    
     margin: 0 20px 25px 20px;
-    position: relative;
-  }
+ }
 
   .Banner-img {
     border-radius: 25px;
     height: 100%;
     object-fit: cover;
     width: 100%;
-   
     filter: brightness(80%);
   }
 
   .Banner-title{
-    position: absolute;
-    left: 25%;
-    top: 40%;
-    bottom: 40%;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 68px;
-    display: flex;
-    align-items: flex-end;
+    transform: translateY(-200px);
+    text-align: center;
+    font-weight: 450;
+    font-size: 70px;
     color: #FFFFFF;
   }
   
   
+  /*Media queries*/
+
+  @media screen and (max-width: 970px){
+    .Banner-title{
+      font-size: 50px;
+      transform: translateY(-200px)
+      
+    }
+  }
+
+  @media screen and (max-width: 730px){
+    .Banner-title{
+      text-align: left;
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 560px){
+    .Banner-title{
+      font-size: 30px;
+      width: 70%;
+    }
+    
+  }

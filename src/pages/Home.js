@@ -10,7 +10,7 @@ function Home(){
     return (
         
         <div className="Home">
-            <Banner title= 'Chez vous partout et ailleurs' image ={BannerImage}/>
+            <Banner title= 'Chez vous, partout et ailleurs' image ={BannerImage}/>
             <div className="Annonces-list"> 
                 
                 {Annonces.map((annonce)=>(

@@ -1,1 +1,17 @@
 
+
+.Carrousel-img{
+    width: 1750px;
+    height: 450px;
+    border-radius: 25px;
+    object-fit: cover;
+   margin-right: 20px;
+   margin-left: 20px;
+   
+}
+
+.VectorLeft{
+   position: absolute;
+   left: 5%;
+   top:35%;
+}
