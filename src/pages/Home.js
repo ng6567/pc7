@@ -1,20 +1,22 @@
-import Annonces from "../data.json"
-import { Link } from "react-router-dom";
-import Banner from "../components/Banner";
-import BannerImage from "../assets/IMG.png"
-import "./Home.css";
+import Annonces from "../data.json" //Importation des données - détails des annonces
+import { Link } from "react-router-dom"; // Importation "route de mise en page" 
+import Banner from "../components/Banner"; //Importation composant banner
+import BannerImage from "../assets/IMG.png" //Importation image
+import "./Home.css"; //Imporation fichier css
 
-
-function Home(){
+/* Composant page home 
+    Importation des attributs du composant banner
+*/
+function Home(){ // HTML du composant
     console.log(Annonces)
-    return (
+    return ( //HTML du composant
         
-        <div className="Home">
+        <div className="Home"> 
             <Banner title= 'Chez vous, partout et ailleurs' image ={BannerImage}/>
-            <div className="Annonces-list"> 
-                
-                {Annonces.map((annonce)=>(
-                    <Link className='Annonce-link' to = {`/Annonce/${annonce.id}`} key = {annonce.id}>
+            <div className="Annonces-list">               
+                {Annonces.map((annonce)=>( // Prendre la liste des données annonces et transformation en liste de composants
+                // Clef annonce.id : associer la donnée au composant du Dom virtuel qui permettra de générer les composants
+                    <Link className='Annonce-link' to = {`/Annonce/${annonce.id}`} key = {annonce.id}> 
                         <img className='Annonce-img' src={annonce.cover} alt={annonce.title}/>
                     <div className="Annonce-content"> 
                         <h3 className="Annonce-title">

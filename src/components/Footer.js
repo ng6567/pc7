@@ -1,5 +1,7 @@
-import "./Footer.css"
+import "./Footer.css" // Importation style
 
+// Composant page Footer
+    
 function Footer(){
     return (
         <div className="Footer">

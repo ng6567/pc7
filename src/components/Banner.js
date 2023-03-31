@@ -1,5 +1,9 @@
-import "./Banner.css"
+import "./Banner.css" //Importation du style
 
+/*Fonction composant : argument props (propriétés) pour banner
+    Utilisation de la destructuration
+    Extraction des sections de données d’objets qui seront affecter à de nouvelles variables 
+*/
 function Banner(props){
     return (
         <div className="Banner">
