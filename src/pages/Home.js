@@ -3,6 +3,10 @@ import { Link } from "react-router-dom"; // Importation "route de mise en page"
 import Banner from "../components/Banner"; //Importation composant banner
 import BannerImage from "../assets/IMG.png" //Importation image
 import "./Home.css"; //Imporation fichier css
+import Footer from "../components/Footer";
+import LogoFooter from "../assets/LogoFooter.png";
+
+
 
 /* Composant page home 
     Importation des attributs du composant banner
@@ -13,7 +17,7 @@ function Home(){ // HTML du composant
         
         <div className="Home"> 
             <Banner title= 'Chez vous, partout et ailleurs' image ={BannerImage}/>
-            <div className="Annonces-list">               
+            <div className="Annonces-list">             
                 {Annonces.map((annonce)=>( // Prendre la liste des données annonces et transformation en liste de composants
                 // Clef annonce.id : associer la donnée au composant du Dom virtuel qui permettra de générer les composants
                     <Link className='Annonce-link' to = {`/Annonce/${annonce.id}`} key = {annonce.id}> 
@@ -27,11 +31,14 @@ function Home(){ // HTML du composant
                         </p>
                     </div>
                     </Link>
-                   
+               
                 ))}
                 
             </div>
+            <Footer image={LogoFooter}/>
+           
         </div>
+            
     );
 }
 export default Home

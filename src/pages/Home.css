@@ -1,3 +1,4 @@
+
 .Annonces-list{
     background-color: rgb(250, 248, 248);
     margin: 80px 20px 40px 20px;
@@ -5,17 +6,18 @@
     padding-top: 80px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;  
+    justify-content: space-between;  
 }
 
 .Annonce-link {
     text-decoration: none;
     color: black;
+    
 }
 
 .Annonce-img{
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px 10px 10px 10px;
     filter: brightness(75%);    

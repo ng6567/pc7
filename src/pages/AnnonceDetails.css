@@ -14,7 +14,7 @@
    position: absolute;
    left: 5%;
    top:35%;
-   background-color: transparent;
+   background-color: black;
    border: none;
 }
 
@@ -22,6 +22,77 @@
    position: absolute;
    right: 5%;
    top: 35%;
-   background-color: transparent;
+   background-color: black;
    border: none;
+}
+.titleAndPseudo{
+   display: flex;
+    justify-content: space-between;
+}
+
+.titleDetails{
+   display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 80%;
+}
+.Carrousel-title{
+   color: #ff6060;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+    margin: 0;
+    width: 635px;
+}
+.Location{
+   color: #ff6060;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 ;
+    line-height: 25px
+    
+}
+.tags{
+   display: flex;
+   flex-direction: row;
+   margin : 2% 0 0 2%
+   
+  
+}
+
+.allTags{
+   
+   align-items: center;
+   width: 9%;
+   background-color: #ff6060;
+   border-radius: 10px;
+   color: #fff;
+   display: flex;
+   font-size: 12px;
+   font-weight: 500;
+   height: 25px;
+   justify-content: center;
+   line-height: 90%;
+   margin: 0 25px 0 0;
+   padding-right: 5px;
+}
+.hostImage{
+   background-color: #c4c4c4;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+}
+.hostName{
+   color: #ff6060;
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: flex-start;
+    line-height: 25px;
+    margin-right: 10px;
+    width: min-content;
+}
+.hostInfos{
+   display: flex;
+   flex-direction: row-reverse;
 }

@@ -32,6 +32,8 @@ function App() {
       <Route path='*' element = {<NotFound/>}></Route>
       <Route path='/Annonce/:id'  element = {<AnnonceDetails/>}></Route>
      </Routes>
+   
+    
     </div>
   );
 }
