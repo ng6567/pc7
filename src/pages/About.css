@@ -1,0 +1,27 @@
+.Fiabilité{
+    margin: 20px 100px 20px 100px;
+}
+.Respect{
+    margin: 20px 100px 20px 100px;
+}
+.Service{
+    margin: 20px 100px 20px 100px;
+}
+.Sécurité{
+    margin: 20px 100px 20px 100px;
+}
+
+@media screen and (max-width: 560px) {
+    .Fiabilité{
+        margin: 0;
+    }
+    .Respect{
+        margin: 0;
+    }
+    .Service{
+        margin: 0;
+    }
+    .Sécurité{
+        margin: 0;
+    }
+  }

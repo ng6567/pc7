@@ -10,21 +10,15 @@ function CollapseItem({ text, title }) {
   return (
     <div className="CollapseItem">
       <div className="CollapseItemHeader">
-        <span>{title}</span>
-        <div>
-          <p>Description</p>
-          <button className="CollapseItemButton" onClick={toogleExpanse}>
-            <img src={Btn} alt="bouton d'expansion" />
-          </button>
-        </div>
-      </div>
-      {expansed && <p className="CollapseItemText">{text}</p>}
-    </div>
    
-    
+        <span className="CollapseTitle">{title}</span>
+        <button  className={expansed ? "CollapseItemButton DownArrow" : "CollapseItemButton"} onClick={toogleExpanse}>
+          <img className="Imagebutton" src={Btn} alt="bouton d'expansion" />
+        </button>
+      </div>
+      {expansed && <p dangerouslySetInnerHTML={{__html:text}} className="CollapseItemText"></p>}
+    </div>
   );
- 
 }
-
 
 export default CollapseItem;

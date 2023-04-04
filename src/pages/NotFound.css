@@ -1,25 +1,40 @@
-.NumberError{
-    font-size: 288px;
-    text-align: center;
-    color: #FF6060;
-    margin-bottom: 10px;
-    
+.NumberError {
+  font-size: 288px;
+  text-align: center;
+  color: #ff6060;
+  margin-bottom: 10px;
 }
-.MessageError{
-    font-weight: 500;
-    font-size: 36px;
-    color: #FF6060;
-    text-align: center;
-    margin-bottom: 0;
-    margin-top: 0;
+.MessageError {
+  font-weight: 500;
+  font-size: 36px;
+  color: #ff6060;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
 }
-@media screen and (max-width: 450px){
-    .NumberError{
-        font-size: 200px;
-    }
-    .MessageError{
-    font-size: 30px;
-      
-    }
+.LinkAccueil{
+    color: #ff6060;
+    font-size: 12px;
+    position: absolute;
+    left:45%;
+    bottom:20%;
+   
     
   }
+@media screen and (max-width: 768px) {
+  .LinkAccueil{
+    left: 30%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .NumberError {
+    font-size: 200px;
+  }
+  .MessageError {
+    font-size: 30px;
+  }
+  .LinkAccueil{
+    left: 25%;
+  }
+  
+}

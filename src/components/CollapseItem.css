@@ -1,3 +1,71 @@
-.CollapseItemButton{
-    width: 5%
+.CollapseItem {
+  width: 100%;
+  
+}
+.CollapseItemHeader {
+  background-color: #ff6060;
+    border-radius: 10px;
+    display: flex;
+    height: 52px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.CollapseTitle {
+  align-items: center;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+.CollapseContent {
+  margin: 0;
+}
+.CollapseItemButton  {
+  margin-right: 20px;
+  background-color: transparent;
+  border:none ;
+  
+}
+.CollapseItemButton :hover {
+  cursor: pointer;
+  
+}
+.DownArrow{
+  transform: rotate(180deg);
+}
+
+.CollapseItemText {
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  color: #ff6060;
+  height: 90px;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px 12px 53px 20px;
+}
+
+@media screen and (max-width: 768px){
+  .CollapseTitle {
+  font-size: 15px;
+      
+  }
+  .CollapseItemText {
+    height: 120px;
+    font-size: 15px;
+    
+  }
+}
+@media screen and (max-width: 560px){
+  .Imagebutton{
+    height: 10px;
+    width: 20px;
+   background-size: 20px;
+  }
+  .CollapseItemText {
+    height: 100px;
+    font-size: 12px;
+    
+  }
 }

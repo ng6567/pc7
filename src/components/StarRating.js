@@ -1,8 +1,8 @@
 import "./StarRating.css"
 
-const StarRating = ({rating}) => {
-    
-    
+
+
+const StarRating = ({rating}) => { 
     return (
       <div className="star-rating">
         {[...Array(5)].map((star, index) => {
@@ -15,7 +15,7 @@ const StarRating = ({rating}) => {
           index += 1;
           return (
            
-              <span className={className}>&#9733;</span>
+              <span className={className} key={index}>&#9733;</span>
             
           );
         })}
