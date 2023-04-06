@@ -5,10 +5,13 @@ import "./AnnonceDetails.css";
 import Annonces from "../data.json"; //Importation des données annonces
 import VectorLeft from "../assets/VectorLeft.png"; //Importation image création bouton gauche
 import VectorRight from "../assets/VectorRight.png"; //Importation image création bouton droit
-import StarRating from "../components/StarRating";
-import CollapseItem from "../components/CollapseItem";
-import Footer from "../components/Footer";
-import LogoFooter from "../assets/LogoFooter.png";
+import StarRating from "../components/StarRating"; //Importation composants étoiles
+import CollapseItem from "../components/CollapseItem"; // Importation composants extensions ouvert/femé
+import Footer from "../components/Footer"; //Importation composant footer
+import LogoFooter from "../assets/LogoFooter.png"; //Importation logo footer
+
+
+//Affichage annonce/id et Création navigation next/previous
 
 function AnnonceDetails() {
   const [annonce, setAnnonce] = useState({
@@ -16,41 +19,37 @@ function AnnonceDetails() {
     host: {},
     tags: [],
     equipments: [],
-  }); //Constantes création states - décomposition - Changement d'etat
+  });
   const [currentImage, setCurrentImage] = useState(0);
-  const navParams = useParams(); // Constante Hook récupération params
-  const navigate = useNavigate(); //Constant méthode changement d'emplacement
+  const navParams = useParams();
+  const navigate = useNavigate();
   useEffect(() => {
-    const annonceFound = Annonces.find((item) => item.id === navParams.id); // annonce correspondant selon son id
+    const annonceFound = Annonces.find((item) => item.id === navParams.id);
     if (annonceFound) {
-      // si l'annonce est trouvée
       console.log(annonceFound);
-      setAnnonce(annonceFound); //Afficher annonce
+      setAnnonce(annonceFound);
     } else {
-      navigate("/non-trouve"); //Sinon redirection router : Ajout et remplacement URL non trouvé
+      navigate("/non-trouve");
     }
-  }, [navParams.id, navigate]); //récupérer les paramètres d’itinéraire à partir du composant fonctionnel rendu par l’itinéraire id
+  }, [navParams.id,navigate]);
   const navPrev = () => {
-    //Navigation pour un retour image antérieure
     if (currentImage > 0) {
-      // L'image actuelle n'est pas la première
-      setCurrentImage(currentImage - 1); //Modification de l'image active : décrémente pour arriver à l'image antérieure
+      setCurrentImage(currentImage - 1);
     } else {
-      setCurrentImage(annonce.pictures.length - 1); //Sinon décrémentation vers dernière image
+      setCurrentImage(annonce.pictures.length - 1);
     }
   };
   const navNext = () => {
-    //Navigation pour passer à l'image suivante
     if (currentImage < annonce.pictures.length - 1) {
-      setCurrentImage(currentImage + 1); // Image actuelle incrémenter sur l'image suivante
+      setCurrentImage(currentImage + 1);
     } else {
-      setCurrentImage(0); // Sinon incrémentation vers deuxième image
+      setCurrentImage(0);
     }
   };
 
   return (
     /*  HTML du composant / Création du Carrousel
-    Création des boutons / ajout un écouteur d’événement sur bouton pour l’événement onClick
+    Création des boutons navigation next et previous/ 
     Html composant : Ajout composant StarRating /Ajout composant Footer
     */
     <div className="AnnonceDetails">
@@ -102,18 +101,17 @@ function AnnonceDetails() {
         </div>
       </div>
       <div className="CollapseAll">
-      <div className="CollapseDescription">
-        <CollapseItem title="Description" text={annonce.description} />
+        <div className="CollapseDescription">
+          <CollapseItem title="Description" text={annonce.description} />
         </div>
         <div className="CollapseEquipments">
-        <CollapseItem
-          title="Equipments"
-          text={annonce.equipments.join("<br/>")}
-        />
-      </div>
+          <CollapseItem
+            title="Equipments"
+            text={annonce.equipments.join("<br/>")}
+          />
+        </div>
       </div>
       <Footer image={LogoFooter} />
-      
     </div>
   );
 }

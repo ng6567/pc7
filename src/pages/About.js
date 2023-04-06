@@ -7,6 +7,8 @@ import CollapseItem from "../components/CollapseItem";
 
 /* Composant page About
     Importation attribut du composant banner
+    Importation attribut du composant collapseItem
+    Importation composant footer
 */
 
 function About({ text, title }) {

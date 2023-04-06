@@ -3,20 +3,18 @@ import { Link } from "react-router-dom"; // Importation "route de mise en page"
 import Banner from "../components/Banner"; //Importation composant banner
 import BannerImage from "../assets/IMG.png"; //Importation image
 import "./Home.css"; //Imporation fichier css
-import Footer from "../components/Footer";
-import LogoFooter from "../assets/LogoFooter.png";
+import Footer from "../components/Footer";//Importation composant footer
+import LogoFooter from "../assets/LogoFooter.png"; //Importation logo footer
 
 /* Composant page home 
     Importation des attributs du composant banner
 */
 function Home() {
-  // HTML du composant
-  console.log(Annonces);
   return (
     //HTML du composant
-
     <div className="Home">
       <Banner title="Chez vous, partout et ailleurs" image={BannerImage} />
+      
       <div className="Annonces-list">
         {Annonces.map(
           (

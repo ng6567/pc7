@@ -2,6 +2,7 @@ import "./CollapseItem.css";
 import Btn from "../assets/Vector.png";
 import { useState } from "react";
 
+//Composant collapse pour extension ouvert fermé 
 function CollapseItem({ text, title }) {
   const [expansed, setExpansed] = useState(false);
   const toogleExpanse = () => {
