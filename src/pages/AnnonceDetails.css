@@ -22,6 +22,16 @@
   border: none;
   margin-right: 10px;
 }
+.div-compteur{
+  position: absolute;
+  left: 50%;
+  
+
+}
+.compteur-img{
+  font-weight: bold;
+  font-size: 25px;
+}
 .titleAndPseudo {
   display: flex;
   justify-content: flex-end;

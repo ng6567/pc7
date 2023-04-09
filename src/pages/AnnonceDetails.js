@@ -10,7 +10,6 @@ import CollapseItem from "../components/CollapseItem"; // Importation composants
 import Footer from "../components/Footer"; //Importation composant footer
 import LogoFooter from "../assets/LogoFooter.png"; //Importation logo footer
 
-
 //Affichage annonce/id et Création navigation next/previous
 
 function AnnonceDetails() {
@@ -31,7 +30,7 @@ function AnnonceDetails() {
     } else {
       navigate("/non-trouve");
     }
-  }, [navParams.id,navigate]);
+  }, [navParams.id, navigate]);
   const navPrev = () => {
     if (currentImage > 0) {
       setCurrentImage(currentImage - 1);
@@ -61,6 +60,7 @@ function AnnonceDetails() {
             alt={annonce.title}
           />
           {annonce.pictures.length > 1 && (
+           
             <nav>
               <button className="VectorLeft" onClick={navPrev}>
                 <img src={VectorLeft} alt="VectorLeft" />
@@ -69,6 +69,14 @@ function AnnonceDetails() {
                 <img src={VectorRight} alt="VectorRight" />
               </button>
             </nav>
+             
+          )}
+          {annonce.pictures.length > 1 &&(
+            <div className="div-compteur">
+              <p className="compteur-img">
+                {currentImage +1}/{annonce.pictures.length}
+              </p>
+            </div>
           )}
         </div>
       )}

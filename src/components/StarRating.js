@@ -1,7 +1,6 @@
 import "./StarRating.css"
 
-
-
+//Composant pour création des étoiles - Utilisation map et css pour ajout étoile couleur ou pas
 const StarRating = ({rating}) => { 
     return (
       <div className="star-rating">

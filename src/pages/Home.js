@@ -8,13 +8,15 @@ import LogoFooter from "../assets/LogoFooter.png"; //Importation logo footer
 
 /* Composant page home 
     Importation des attributs du composant banner
+    Importation composant footer
 */
 function Home() {
+  console.log(Annonces)
   return (
     //HTML du composant
     <div className="Home">
       <Banner title="Chez vous, partout et ailleurs" image={BannerImage} />
-      
+    
       <div className="Annonces-list">
         {Annonces.map(
           (
@@ -38,11 +40,13 @@ function Home() {
                 <p className="Annonce-text">{annonce.location}</p>
               </div>
             </Link>
+            
           )
         )}
       </div>
       <Footer image={LogoFooter} />
     </div>
+    
   );
 }
 export default Home;
